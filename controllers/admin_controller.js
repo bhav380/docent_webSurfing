@@ -1,4 +1,4 @@
-export function admin(req, res) {
+module.exports.admin= function admin(req, res) {
     console.log("admin loaded");
 
 

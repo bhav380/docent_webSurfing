@@ -10,7 +10,7 @@ const adminController = require('../controllers/admin_controller');
 
 router.get('/', homeController.home);
 
-router.get('/admin',adminController.admin);
+router.get('/admin', adminController.admin);
 
 router.use('/users', require('./users'));
 

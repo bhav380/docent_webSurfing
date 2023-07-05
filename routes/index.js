@@ -2,30 +2,55 @@ const express = require('express');
 
 const router = express.Router();
 
+const passport = require('passport');
+const SessionChallengeStore = require('passport-fido2-webauthn').SessionChallengeStore;
+const store = new SessionChallengeStore();
+const base64url = require('base64url');
+
+
 
 
 const homeController = require('../controllers/home_controller');
+
 const blackListController = require('../controllers/blackList_controller');
 const adminController = require('../controllers/admin_controller');
+=======
+
 
 const userController = require('../controllers/user_controller');
+const blackListController = require('../controllers/blackList_controller');
 
-router.get('/', homeController.home);
 
-<<<<<<< HEAD
+
+
 router.get('/admin', adminController.admin);
 =======
 router.get('/signup',userController.signup);
+=======
 
 
->>>>>>> 504814bd6664d9f05dbfe8a8709ec72b648c80cc
 
+
+router.get('/', homeController.home);
+router.get('/signup',userController.signup);
 router.use('/users', require('./users'));
 
-router.post('/blacklist',blackListController.blackList);
 
 
 
+
+
+
+
+
+
+
+
+
+router.use('/report',require('./report'));
+
+
+router.use('/api',require('./api'));
 
 
 

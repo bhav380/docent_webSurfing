@@ -1,4 +1,4 @@
-module.exports.admin= function blog(req, res) {
+module.exports.blog= function blog(req, res) {
     console.log("blog loaded");
 
 

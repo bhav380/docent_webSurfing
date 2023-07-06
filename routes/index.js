@@ -12,9 +12,9 @@ const base64url = require('base64url');
 
 const homeController = require('../controllers/home_controller');
 
-const blackListController = require('../controllers/blackList_controller');
+
 const adminController = require('../controllers/admin_controller');
-=======
+
 
 
 const userController = require('../controllers/user_controller');
@@ -24,24 +24,12 @@ const blackListController = require('../controllers/blackList_controller');
 
 
 router.get('/admin', adminController.admin);
-=======
-router.get('/signup',userController.signup);
-=======
-
 
 
 
 router.get('/', homeController.home);
 router.get('/signup',userController.signup);
 router.use('/users', require('./users'));
-
-
-
-
-
-
-
-
 
 
 

@@ -1,4 +1,4 @@
-#signup-page header{
+/* #signup-page header{
   position:relative;
   display:flex;
   flex-wrap: nowrap; 
@@ -30,7 +30,7 @@
 
 #signup-form label{
     /* border :2px solid green; */
-    width:100px;  
+    /* width:100px;  
 }
 
 
@@ -55,7 +55,7 @@
 
 #f-name,#l-name,#inputEmail3,#inputPassword3,#confirm-password3,#adhaar{
     /* display:inline-block; */
-    width:210px;
+    /* width:210px;
   
   } 
 
@@ -68,7 +68,7 @@
 }
 
 /*margins*/
-.mg-left-5{
+/* .mg-left-5{
     margin-left:5rem;
 } 
 
@@ -119,7 +119,7 @@
 
 
 /*media query*/
-@media only screen and (max-width:480px){
+/* @media only screen and (max-width:480px){
 
   .mg-left-5{
     margin-left:2rem;
@@ -160,7 +160,7 @@
   
   #f-name,#l-name,#inputEmail3,#inputPassword3,#confirm-password3,#adhaar{
     /* display:inline-block; */
-    width:150px;
+    /* width:150px;
     font-size:0.92rem;
   
   } 
@@ -196,4 +196,382 @@
   } 
 
 }  
+ */ 
+
+ /* #trial{
+    height:1000px;
+    border : 4px solid purple;
+    width:auto
+
+} */
+/* 
+#signup-form{
+    border : 2px solid red;
+   
+} */
+
+
+#signup-page header{
+ 
+  position:relative;
+  display:flex;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+  /* left:30%; */
+  margin:auto;
+  width:460px;
+  height:90px;
+  margin-top:70px;
+
+
+}
+#signup-page header div{
+color:#000000b3;
+width:3rem;
+height:3rem;
+
+
+}
+
+
+
+#signup-page header h1{
+font-size:2.45rem;
+font-weight: bolder;
+font-family: 'Brush Script MT', cursive;
+}
+
+#signup-page header h1::first-letter{
+font-size:4.6rem;
+
+}
+
+
+
+
+
+#signup-form label{
+  /* border :2px solid green; */
+  width:100px;
+
+  
+}
+
+
+
+#signup-form{
+  width:350px;
+
+  position: relative;
+  top:25.5px;
+
+  margin:auto;
+  
+}
+
+label{
+display:inline-block;
+letter-spacing: 0rem;
+/* width:150px; */
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size:1rem;
+font-weight:600;
+font-style: bold;
+
+}
+
+#inputEmail3,#inputPassword3,#f-name,#l-name,#confirm-password3{
+  /* display:inline-block; */
+  width:210px;
+  box-shadow: 1px 1px .8px .8px;
+
+} 
+
+
+
+#signup-form div div div{
+  width:100px;
+
+  
+
+} 
+
+#signup-form div div {
+  width:300px;
+}
+
+
+#signup-submit-container{
+width:280px;
+display:flex;
+flex-wrap: nowrap;
+justify-content: space-between;
+}
+
+
+
+#signup-button{
+
+margin-top:5px;
+width:150px;
+height:41px;
+box-shadow: 1.4px 1.4px 1.5px 1.5px;
+background-color: rgb(14, 51, 235);
+border-radius: 5px;
+
+}
+
+
+#signup-button .btn{
+
+  position:relative;
+  width:92px;
+  top:-5px;
+  height:34px;
+  padding:5px;
+  font-size:1.08rem;
+  border:none;
+
+
+  background-color: rgb(14, 51, 235);
+}
+
+#signup-button:hover{
+box-shadow: 1.5px 1.5px 2px 2px;
+}
+
+
+#divider-container{
+margin:auto;
+display:flex;
+width:316px;
+flex-wrap: nowrap;
+justify-content: center;
+}
+
+#divider-container p{
+
+color:grey;
+/* border:2px solid red; */
+width:37.8px;
+/* margin:auto; */
+position:relative;
+left:-4.6px;
+font-size:0.815rem;
+padding:3px;
+top:69px;
+}
+
+#divider-container p span{
+font-size:0.85rem;
+position: relative;
+
+/* display:inline-block; */
+margin-top:1px;
+}
+
+.line-break{
+position: relative;
+top:62px;
+
+height:2px;
+width:130px;
+border-bottom:1.3px solid grey;;
+margin:auto;
+}
+
+#x1{
+margin-right:-31.2px;
+}
+#x2{
+margin-left:0.7px;
+}
+
+#google-signup{
+width:425px;
+height:44px;
+position: relative;
+
+
+box-shadow: 2.2px 2.2px 3px 3px;
+border-radius: 17px;
+background-color: blue;
+margin:auto;
+
+top:68px;
+
+}
+
+#google-signup button{
+letter-spacing: 0.1rem;
+margin:auto;
+border:none;
+width:410px;
+height:40px;
+padding:5px;
+background-color:blue;
+font-weight:600;
+}
+
+#google-signup:hover{
+box-shadow: 2.4px 2.4px 3.4px 3.4px;
+}
+
+
+#google-signup i{
+display: inline-block;
+position: relative;
+top:1.5px;
+
+left:-15px;
+font-size:1.21rem;
+color:white
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*margins*/
+.mg-left-5{
+    margin-left:5rem;
+} 
+
+
+
+
+
+/*media query*/
+
+
+
+
+
+@media only screen and (max-width:480px){
+
+  .mg-left-5{
+    margin-left:2rem;
+  }
+  #inputEmail3,#inputPassword3,#f-name,#l-name,#confirm-password3{
+
+    width:150px;
+    font-size:0.92rem;
+    margin-left:48px;
+  
+  }
+
+  #confirm{
+    font-size:0.82rem;
+  }
+
+  #signup-form {
+    font-size:0.92rem;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin-left:-6px;
+  }
+
+
+
+      
+  #signup-button{
+    margin-top:15px;
+    height:42px;
+    width:80px;
+    margin-left:10px;
+
+  
+  }
+
+
+  #signup-button .btn{
+
+      position:relative;
+      left:5px;
+      top:-5px;
+
+      width:75px;
+      height:34px;
+      padding:5px;
+      font-size:1.08rem;
+      border:none;
+      
+  }
+
+
+  #signup-page header{
+   
+    width:280px;
+    margin-top:36px;
+
+
+  } 
+
+  #signup-page header h1{
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: 'Brush Script MT', cursive;
+  }
+
+  #signup-page header h1::first-letter{
+
+     font-size:49px;
+
+  }
+  #signup-page header div{
+    margin-top:0.7rem;
+    width:2.2rem;
+    height:2.2rem;
+  }
+
+
+
+  #divider-container{
+    position: relative;
+    right:-10px;
+    top:-15px;
+    
+  }
+  
+
+
+  
+
+#google-signup{
+  margin:auto;
+  width:270px;
+ 
+  margin-top:-5px;
+}
+
+
+#google-signup button{
+
+  font-size:1rem;
+  position: relative;
+  left:-36px;
+
+  margin-top:3px;
+  height:38px;
+  width:140px;
+   
+} 
+
+}  
+
 

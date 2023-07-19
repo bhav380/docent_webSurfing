@@ -1,7 +1,10 @@
+p{
+    color:blue;
+}
 footer{
     position:relative;
     
-    bottom: -50vh;   
+     bottom: -50vh;   
     color: olivedrab;
     display: flex;
     background-color: lightgrey;
@@ -11,3 +14,5 @@ footer{
 
    
 }
+
+/* heiid */

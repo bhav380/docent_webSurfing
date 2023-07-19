@@ -1,0 +1,127 @@
+::1 - - [10/Jul/2023:18:30:14 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:30:14 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:30:37 +0000] "GET /users/signin HTTP/1.1" 200 8490 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:30:37 +0000] "GET /function(filePath)%7B%20%20%20%20%20%20%20%20if(env.name=='development')%7B%20%20%20%20%20%20%20%20%20%20%20%20console.log(%22hello%20;;;%22,filePath);%20%20%20%20%20%20%20%20%20%20%20%20return%20filePath;%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20console.log(filePath);%20%20%20%20%20%20%20%20console.log(%60$%7BJSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]%7D%60)%20%20%20%20%20%20%20%20return%20JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath];%20%20%20%20%7D HTTP/1.1" 404 732 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:30:37 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:30:37 +0000] "GET /function(filePath)%7B%20%20%20%20%20%20%20%20if(env.name=='development')%7B%20%20%20%20%20%20%20%20%20%20%20%20console.log(%22hello%20;;;%22,filePath);%20%20%20%20%20%20%20%20%20%20%20%20return%20filePath;%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20console.log(filePath);%20%20%20%20%20%20%20%20console.log(%60$%7BJSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]%7D%60)%20%20%20%20%20%20%20%20return%20JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath];%20%20%20%20%7D HTTP/1.1" 404 732 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:06 +0000] "GET /users/signin HTTP/1.1" 200 8052 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:06 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:17 +0000] "GET /report/blacklisted-urls HTTP/1.1" 200 9822 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:17 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:30 +0000] "GET / HTTP/1.1" 200 16460 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:30 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:34 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:34 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:37 +0000] "GET /users/signup HTTP/1.1" 200 9221 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:31:37 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:32:06 +0000] "GET /users/signup HTTP/1.1" 304 - "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [10/Jul/2023:18:32:06 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:32:10 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:32:10 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:32:13 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:32:13 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:24 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:24 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:25 +0000] "GET /users/signup HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:25 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:29 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:29 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:51 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:51 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:52 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:46:52 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:00 +0000] "GET /users/signup HTTP/1.1" 304 - "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:00 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:01 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/users/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:01 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:03 +0000] "GET /report/blacklisted-urls?search= HTTP/1.1" 200 9822 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:03 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:07 +0000] "GET /report/blacklisted-urls?search=8 HTTP/1.1" 200 9897 "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:47:07 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=8" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[0mGET /report/blacklisted-urls?search=8 [32m200[0m 122.806 ms - 11956[0m
+[0mGET /report/blacklisted-urls?search= [32m200[0m 72.740 ms - 60677[0m
+::1 - - [10/Jul/2023:18:59:40 +0000] "GET /report/blacklisted-urls?search= HTTP/1.1" 200 9822 "http://localhost:8000/report/blacklisted-urls?search=8" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:40 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:43 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:49 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:49 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:52 +0000] "GET /report/blacklisted-urls HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:52 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:54 +0000] "GET /report/blacklisted-urls?search=kdk HTTP/1.1" 200 9899 "http://localhost:8000/report/blacklisted-urls" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:54 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=kdk" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:57 +0000] "GET /report/blacklisted-urls?search= HTTP/1.1" 304 - "http://localhost:8000/report/blacklisted-urls?search=kdk" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:18:59:57 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[0mGET /report/blacklisted-urls?search= [32m200[0m 108.797 ms - 60677[0m
+::1 - - [10/Jul/2023:19:00:35 +0000] "GET /report/blacklisted-urls?search= HTTP/1.1" 200 9822 "http://localhost:8000/report/blacklisted-urls?search=kdk" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [10/Jul/2023:19:00:35 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:19:00:45 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:19:00:45 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:19:00:54 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/report/blacklisted-urls?search=" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [10/Jul/2023:19:00:54 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[0mGET / [32m200[0m 69.571 ms - 16462[0m
+[0mGET /favicon.ico [33m404[0m 21.210 ms - 150[0m
+[0mGET /users/signin [32m200[0m 51.069 ms - 8021[0m
+[0mGET /users/signup [32m200[0m 53.399 ms - 9190[0m
+[0mGET /users/signin [36m304[0m 22.020 ms - -[0m
+[0mGET /users/signup [36m304[0m 39.963 ms - -[0m
+[0mGET /users/signup [32m200[0m 56.285 ms - 9717[0m
+[0mGET /users/signup [32m200[0m 40.133 ms - 9668[0m
+[0mGET /users/signin [36m304[0m 36.765 ms - -[0m
+[0mGET /users/signup [36m304[0m 18.353 ms - -[0m
+[0mGET /users/signup [36m304[0m 45.185 ms - -[0m
+[0mGET /users/signup [36m304[0m 44.252 ms - -[0m
+[0mGET /users/signup [36m304[0m 54.285 ms - -[0m
+[0mGET /users/signup [36m304[0m 45.310 ms - -[0m
+[0mGET /users/signup [36m304[0m 27.379 ms - -[0m
+[0mGET /users/signup [36m304[0m 42.478 ms - -[0m
+[0mGET /users/signup [36m304[0m 40.409 ms - -[0m
+[0mGET /users/signup [36m304[0m 47.252 ms - -[0m
+[0mGET /users/signup [36m304[0m 14.364 ms - -[0m
+[0mGET /users/signup [36m304[0m 38.081 ms - -[0m
+[0mGET /users/signup [36m304[0m 14.940 ms - -[0m
+[0mGET /users/signup [36m304[0m 43.165 ms - -[0m
+[0mGET /users/signup [36m304[0m 34.649 ms - -[0m
+[0mGET /users/signup [36m304[0m 35.662 ms - -[0m
+[0mGET /users/signup [36m304[0m 22.058 ms - -[0m
+[0mGET /users/signup [36m304[0m 36.843 ms - -[0m
+[0mGET /users/signup [36m304[0m 18.709 ms - -[0m
+[0mGET /users/signin [36m304[0m 45.742 ms - -[0m
+[0mGET /users/signup [36m304[0m 36.259 ms - -[0m
+[0mGET /users/signup [36m304[0m 37.777 ms - -[0m
+[0mGET /users/signup [36m304[0m 18.212 ms - -[0m
+[0mGET /users/signup [36m304[0m 37.896 ms - -[0m
+[0mGET /users/signup [36m304[0m 15.266 ms - -[0m
+[0mGET /users/signup [36m304[0m 35.031 ms - -[0m
+[0mGET /users/signup [36m304[0m 34.203 ms - -[0m
+[0mGET /users/signup [36m304[0m 36.638 ms - -[0m
+[0mGET /users/signup [36m304[0m 39.173 ms - -[0m
+[0mGET /users/signup [36m304[0m 41.739 ms - -[0m
+[0mGET /users/signup [36m304[0m 20.498 ms - -[0m
+[0mGET /users/signup [36m304[0m 35.605 ms - -[0m
+[0mGET /users/signup [36m304[0m 36.756 ms - -[0m
+[0mGET /users/signup [36m304[0m 13.487 ms - -[0m
+[0mGET /users/signup [36m304[0m 14.610 ms - -[0m
+[0mGET /users/signup [36m304[0m 38.060 ms - -[0m
+[0mGET /users/signup [36m304[0m 40.790 ms - -[0m
+[0mGET /users/signup [36m304[0m 43.046 ms - -[0m
+[0mGET /users/signup [36m304[0m 32.592 ms - -[0m
+[0mGET /users/signup [36m304[0m 39.898 ms - -[0m
+[0mGET /users/signup [36m304[0m 14.661 ms - -[0m
+[0mGET /users/signup [36m304[0m 41.477 ms - -[0m
+[0mGET /users/signup [36m304[0m 34.875 ms - -[0m
+[0mGET /users/signup [36m304[0m 38.604 ms - -[0m
+[0mGET /users/signup [36m304[0m 17.738 ms - -[0m
+[0mGET /users/signup [32m200[0m 41.416 ms - 9678[0m
+[0mGET /users/signup [32m200[0m 13.514 ms - 9681[0m
+[0mGET /users/signup [36m304[0m 39.539 ms - -[0m
+[0mGET /users/signup [36m304[0m 44.029 ms - -[0m
+[0mGET /users/signup [36m304[0m 19.192 ms - -[0m
+[0mGET /users/signin [36m304[0m 48.352 ms - -[0m
+[0mGET /users/signup [36m304[0m 38.920 ms - -[0m
+[0mGET /users/signin [36m304[0m 35.350 ms - -[0m
+[0mGET /report/blacklisted-urls [32m200[0m 201.240 ms - 60677[0m
+[0mGET /users/signup [36m304[0m 18.465 ms - -[0m
+[0mGET / [36m304[0m 55.592 ms - -[0m
+[0mGET / [36m304[0m 29.621 ms - -[0m
+[0mGET /admin [33m404[0m 6.079 ms - 144[0m
+[0mGET /admin [33m404[0m 4.241 ms - 144[0m

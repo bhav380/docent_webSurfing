@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
     lname: {
 
         type: String,
-        required: true
+        // required: true
     },
 
     //used for biometric auth

@@ -1,14 +1,25 @@
 // import {base64url} from 'base64url';
 // /Users/bhave/webDev/docent/docent_webSurfing/node_modules/base64url/dist/base64url
 
+
+
 {
 
 window.addEventListener('load',function(){
 
+    //  const encode = methods[0];
+    //  const decode = methods[1];
+
     let blackList = function(){
         let blackListForm = $('#blacklist-link-form');
 
+
+
         blackListForm.submit(async function(e){
+
+          const name = $('[name="user[name]"]').val();
+          const displayName = $('[name="user[displayName]"]').val();
+          
 
 
             const url = $(this).attr('action');
@@ -19,7 +30,10 @@ window.addEventListener('load',function(){
 
             console.log(nextUrl+"/////bc");
 
-            // console.log(url);
+            const userid = nextUrl.slice(20);
+
+
+            console.log(userid);
 
             e.preventDefault();
 
@@ -31,45 +45,86 @@ window.addEventListener('load',function(){
                 }
               })
               .then(function(response) {
-                console.log(response);
-             
-                return response.json();
+                if (response.ok) {
+                  return response.json();
+                } else {
+                  throw new Error('Response not OK');
+                }
               })
               .then(function(json) {
-                return navigator.credentials.get({
-                  publicKey: {
-                    challenge: base64url.decode(json.challenge),
-                    allowCredentials: [
-                     { type: 'public-key',id:  base64url.decode('VjXl8fuJXIAqLg-BVrR5oeLLfee6gBGKXdMxo6xtMySugJfU2HNvTJk84T1DgFYtJDpDrwL2Bg_QM4xQwVAutA') },
-                     { type: 'public-key', id: base64url.decode('noMuGuaaVLubAVjuS6Z2BYrrBpajYhtjnFgvSjk0IV1LJeVrupbpnw') }
-                    ]
-                  }
-                });
+                console.log('Response JSON:', json);
+                const publicKey = {
+                  challenge: base64url.decode(json.challenge),
+                  rp: {
+                    name: 'Your RP Name' // Replace with your RP (relying party) name
+                  },
+                  user: {
+                    id:  Uint8Array.from(userid, c => c.charCodeAt(0)), // Replace with the actual user ID
+                    name: name, // Replace with the actual user name
+                    displayName: displayName // Replace with the actual user display name
+                  },
+                  pubKeyCredParams: [],
+                  authenticatorSelection: {
+                    authenticatorAttachment: 'platform',
+                    userVerification: 'required'
+                  },
+                  attestation: 'none'
+                };
+        
+                return navigator.credentials.create({ publicKey });
+                
               })
               .then(function(credential) {
+
+                console.log("hi");
                 var body = {
                   id: credential.id,
+                  // response: {
+                  //   attestationObject:btoa(String.fromCharCode.apply(null, new Uint8Array(credential.response.attestationObject)))
+                  // }
+
                   response: {
-                    clientDataJSON: encode(credential.response.clientDataJSON),
-                    authenticatorData: encode(credential.response.authenticatorData),
-                    signature: encode(credential.response.signature),
-                    userHandle: credential.response.userHandle ? encode(credential.response.userHandle) : null
+                    clientDataJSON: base64url.encode(credential.response.clientDataJSON),
+                    authenticatorData: base64url.encode(credential.response.authenticatorData),
+                  
+                  
+                    signature: base64url.encode(credential.response.signature),
+                    userHandle: credential.response.userHandle ? base64url.encode(credential.response.userHandle) : null
                   }
                 };
+
+                console.log(credential);
+                console.log(credential.authenticatorAttachment);
+
                 if (credential.authenticatorAttachment) {
+                  console.log("333");
                   body.authenticatorAttachment = credential.authenticatorAttachment;
                 }
+
+                console.log(body.response.clientDataJSON);
+
+                
                 
                 return fetch(''+nextUrl, {
                   method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(body)
                  
                 });
+
+
               })
               .then(function(response) {
+
+                console.log(response);
                 return response.json();
               })
               .then(function(json) {
+                console.log("hiend");
                 window.location.href = json.location;
+                console.log("hi");
               })
               .catch(function(error) {
                 console.log(error);
@@ -87,6 +142,27 @@ window.addEventListener('load',function(){
         
     }
 
+    let blackListForm = $('#blacklist-link-form');
+
+    navigator.credentials.get({ publicKey: { authenticatorSelection: { authenticatorAttachment: 'platform' } } })
+    .then(function(credential) {
+      const supportedAlgorithm = credential.response.getPublicKey().algorithm.name;
+      console.log('Supported Algorithm:', supportedAlgorithm);
+
+      // Add the supported algorithm to the pubKeyCredParams array
+      blackListForm.submit(function(e) {
+        const publicKey = {
+          ...publicKey,
+          pubKeyCredParams: [{ type: 'public-key', alg: supportedAlgorithm }]
+        };
+        e.preventDefault();
+        navigator.credentials.create({ publicKey });
+      });
+    })
+    .catch(function(error) {
+      console.error('Error retrieving supported algorithm:', error);
+    });
+
     blackList();
 
 });
@@ -94,6 +170,17 @@ window.addEventListener('load',function(){
    
 }
 
+
+
+// return navigator.credentials.get({
+//   publicKey: {
+//     challenge: base64url.decode(json.challenge),
+//     allowCredentials: [
+//      { type: 'public-key',id:  base64url.decode('VjXl8fuJXIAqLg-BVrR5oeLLfee6gBGKXdMxo6xtMySugJfU2HNvTJk84T1DgFYtJDpDrwL2Bg_QM4xQwVAutA') },
+//      { type: 'public-key', id: base64url.decode('noMuGuaaVLubAVjuS6Z2BYrrBpajYhtjnFgvSjk0IV1LJeVrupbpnw') }
+//     ]
+//   }
+// });
 
 
 

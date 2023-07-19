@@ -1,3 +1,4 @@
+
 #docent-logo{
     position:absolute;
     height:52px;
@@ -16,6 +17,7 @@
     height:40px;
    
 }
+/* hill */
 
 .nav-item a{
     color:rgba(255, 255, 255, 0.873);   
@@ -34,6 +36,7 @@
 .link a{
     color:rgba(220, 237, 237, 0.951);
 }
+
 
 .link a:hover{
     color : rgb(255, 255, 255);   

@@ -1,6 +1,10 @@
 const express = require('express');
+const env = require('./config/environment');
+const logger = require('morgan');
+
 const path = require('path');
 const app = express();
+require('./config/view-helpers')(app);
 
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
@@ -31,10 +35,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // app.use(express.json());
 
-app.use(express.static('./assets'));
+app.use(express.static(env.asset_path));
+console.log(`${env.asset_path}`);
+
+
 app.use(express.static(path.join(process.cwd(), "/img")));
 
-
+app.use(logger(env.morgan.mode,env.morgan.options));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout
@@ -65,7 +72,7 @@ app.set('views', './views');
 
 app.use(session({
     name : 'webSurf',
-    secret : 'webSurf',
+    secret : env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {

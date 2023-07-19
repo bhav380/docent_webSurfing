@@ -1,0 +1,69 @@
+
+#docent-logo{
+    position:absolute;
+    height:52px;
+    width:80px;
+    margin-left:-56.5px;
+    margin-top:-11px;
+    border :1px soid black;
+ 
+}
+
+#docent{
+    margin-left:27px;
+}
+
+.nav-item{
+    height:40px;
+   
+}
+/* hill */
+
+.nav-item a{
+    color:rgba(255, 255, 255, 0.873);   
+}
+
+
+.nav-item a:hover{
+    color : rgb(255, 255, 255);
+}
+
+.navbar-brand span:hover{
+    color:antiquewhite;
+}
+
+
+.link a{
+    color:rgba(220, 237, 237, 0.951);
+}
+
+
+.link a:hover{
+    color : rgb(255, 255, 255);   
+}
+
+#dropdown-menu{
+    background-color: rgb(255, 255, 255);
+}
+
+#dropdown-menu li a{
+    color:black;
+}
+
+#dropdown-menu li a:hover{
+    background-color: aliceblue;
+}
+
+.dropdown button{
+    background-color: #3e44519f;
+}
+.dropdown button:hover{
+    background-color:  #3e4451b6;
+}
+
+@media (min-width:992px){
+    .nav-item a:hover{
+    
+        border-bottom : 0.5px solid rgb(243, 235, 235);
+    }   
+} 

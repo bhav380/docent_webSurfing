@@ -1,7 +1,4 @@
 {
-  "_footer.js": "_footer-d34286ed55.js",
-  "_header.js": "_header-c43154100f.js",
-  "base64url.js": "base64url-a511aafc8a.js",
   "css/blackListed_urls.css": "css/blackListed_urls-941acfc501.css",
   "css/footer.css": "css/footer-f19677928e.css",
   "css/header.css": "css/header-cb2a7676d9.css",
@@ -9,8 +6,12 @@
   "css/layout.css": "css/layout-fe83d7b3d5.css",
   "css/reported_mail.css": "css/reported_mail-5364edce01.css",
   "css/signin.css": "css/signin-e4fcb77601.css",
-  "css/signup.css": "css/signup-27b25e24b9.css",
+  "css/signup.css": "css/signup-385a462f1f.css",
   "css/styles.css": "css/styles-d41d8cd98f.css",
-  "home.js": "home-5245b999f2.js",
-  "report_links.js": "report_links-9f029050fe.js"
+  "img/logo.png": "img/logo-d35326ff40.png",
+  "js/_footer.js": "js/_footer-d34286ed55.js",
+  "js/_header.js": "js/_header-c43154100f.js",
+  "js/base64url.js": "js/base64url-a511aafc8a.js",
+  "js/home.js": "js/home-5245b999f2.js",
+  "js/report_links.js": "js/report_links-9f029050fe.js"
 }

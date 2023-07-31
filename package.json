@@ -74,6 +74,8 @@
 
         "layouts": "^3.0.2",
 
+        "merge-stream": "^2.0.0",
+
         "mongodb": "^5.6.0",
 
         "mongoose": "^7.3.0",

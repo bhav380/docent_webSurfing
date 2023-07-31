@@ -9,10 +9,18 @@ module.exports = (app) =>{
             return filePath;
         }
 
-        console.log(filePath);
-        console.log(`${JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]}`)
+        // console.log(filePath);
 
-        return JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath];
+        // console.log(`${JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]}`)
+        const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../public/assets/rev-manifest.json')));
+
+      const newPath = manifest[filePath];
+
+    //   console.log(newPath);
+
+      return newPath ? newPath : filePath;
+
+        // return JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath];
 
     }
 }

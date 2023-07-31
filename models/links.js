@@ -34,11 +34,7 @@ const linkSchema = new mongoose.Schema({
         required:true
     },
 
-    biometricData :{
-        type:[Object],
-        required: true
-        
-    }
+  
 
     // reportInfo: {
     //     type: [[String]],

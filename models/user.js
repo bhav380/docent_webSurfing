@@ -16,20 +16,9 @@ const userSchema = new mongoose.Schema({
     lname: {
 
         type: String,
-        // required: true
-    },
-
-    //used for biometric auth
-    userHandle: {
-        type:String,
-        unique:true
-    },
-    attestationResponse:{
-        type:Object
-    },
-    biometricData:{
-        type:Object
+       
     }
+
  
 }, {
     timestamps: true

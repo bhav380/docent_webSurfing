@@ -57,7 +57,7 @@ module.exports.create = async function(req,res){
                 password: req.body.password,
                 fname: req.body.fname,
                 lname: req.body.lname,
-                biometricData:null
+            
             
             });
 

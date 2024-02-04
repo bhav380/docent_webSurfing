@@ -1,9 +1,10 @@
 const User = require('../models/user');
 const ForgotPassToken = require('../models/forgot_pass_token');
 const crypto = require('crypto');
-const queue = require('../config/kue');
+// const queue = require('../config/kue');
 // const queue = require('../config/bull');
-const forgotPasswordEmailWorder = require('../workers/forgot_password_worker');
+// const forgotPasswordEmailWorder = require('../workers/forgot_password_worker');
+const forogtPasswordMailer = require('../mailers/forgot_pass_mailer');
 const { Script } = require('vm');
 const { listenerCount } = require('stream');
 
@@ -176,14 +177,16 @@ module.exports.findEmail = async function (req, res) {
 
             // console.log(forgotPassToken.user.fname);
 
-            let job = queue.create('findEmail', data).save(function (err) {
+            forogtPasswordMailer.forgotPassword(data);
 
-                if (err) {
-                    console.log('Error in sending to the queue (job - forgot pass)');
-                    return;
-                }
-                console.log('job enqueued (forgot password)', job.id);
-            });
+            // let job = queue.create('findEmail', data).save(function (err) {
+
+            //     if (err) {
+            //         console.log('Error in sending to the queue (job - forgot pass)');
+            //         return;
+            //     }
+            //     console.log('job enqueued (forgot password)', job.id);
+            // });
 
             return res.send('<h1 style="text-align:center ; ">Reset password link sent to your email!</h1>');
         } else {

@@ -4,8 +4,8 @@ const validator = require('validator');
 const alert = require('alert');
 const reportMailer = require('../mailers/reported_mailer');
 const User = require('../models/user');
-const queue = require('../config/kue');
-const reportEmailWorker = require('../workers/report_email_worker');
+// const queue = require('../config/kue');
+// const reportEmailWorker = require('../workers/report_email_worker');
 const passport = require('passport');
 const { trusted } = require('mongoose');
 var base64url = require('base64url');
@@ -430,15 +430,17 @@ module.exports.blackList = async function (req, res, next) {
         infoUser.push(req.body.about);
         console.log(infoUser);
 
-        let job = queue.create('emails', infoUser).save(function (err) {
+        reportMailer.newReport(infoUser);
 
-            if (err) {
-                console.log('error in sending to the queue');
-                return;
-            }
-            console.log('job enqueued', job.id);
+        // let job = queue.create('emails', infoUser).save(function (err) {
 
-        });
+        //     if (err) {
+        //         console.log('error in sending to the queue');
+        //         return;
+        //     }
+        //     console.log('job enqueued', job.id);
+
+        // });
 
         if (req.xhr) {
             return res.status(200).json({
